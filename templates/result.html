@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21522057-Lab03</title>
+    <style>
+        /* Container chính cho nội dung */
+        .container {
+            text-align: center;
+        }
+        /* Hiển thị ảnh gốc */
+        .original-image {
+            margin-bottom: 5px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; 
+            justify-items: center; 
+        }
+        .grid-container-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px; 
+            justify-items: center;
+        }
+        img {
+            width: 100%;
+            max-width: 400px; 
+            height: auto;
+        }
+        h3 {
+            margin-bottom: 0px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px; /* Thêm khoảng cách dưới h1 */
+        }
+    </style>
+</head>
+<body>
+    <h1> Image Enhancing </h1>
+    
+    <div class="container">
+        <!-- Hiển thị ảnh gốc -->
+        <div class="original-image">
+            <h3>Original Image</h3>
+            <img src="/static/images/original.jpg" alt="Original Image">
+        </div>
+
+        <!-- Grid hàng đầu với 3 ảnh -->
+        <div class="grid-container">
+            <div>
+                <h3>Denoised Image</h3>
+                <img src="/static/images/denoised.jpg" alt="Denoised Image">
+            </div>
+            <div>
+                <h3>Sharpened Image</h3>
+                <img src="/static/images/sharpened.jpg" alt="Sharpened Image">
+            </div>
+            <div>
+                <h3>Sobel Edge Detection</h3>
+                <img src="/static/images/sobel.jpg" alt="Sobel Edge Detection">
+            </div>
+        </div>
+        
+        <div class="grid-container-2">
+            <div>
+                <h3>Prewitt Edge Detection</h3>
+                <img src="/static/images/prewitt.jpg" alt="Prewitt Edge Detection">
+            </div>
+            <div>
+                <h3>Canny Edge Detection</h3>
+                <img src="/static/images/canny.jpg" alt="Canny Edge Detection">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
